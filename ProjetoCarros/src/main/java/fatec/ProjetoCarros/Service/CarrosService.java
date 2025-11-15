@@ -48,13 +48,12 @@ public class CarrosService {
     }
 
     //atualizando as informações sobre os novos carros
-    public void atualizandoCarros(Carros carroNovo){
-        Carros carro = carrosRepository.findById(carroNovo.getId())
+    public void atualizandoCarros(Long id, Carros carroNovo){
+        Carros carro = carrosRepository.findById(id)
                         .orElseThrow(() -> new IllegalArgumentException("Esse carro não existe"));
         carro.setModelo(carroNovo.getModelo());
         carro.setAno(carroNovo.getAno());
         carro.setQuilometragem(carroNovo.getQuilometragem());
-        carro.setImagemPath(carroNovo.getImagemPath());
         carrosRepository.save(carro);
     }
 

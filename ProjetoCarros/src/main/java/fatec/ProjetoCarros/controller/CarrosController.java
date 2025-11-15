@@ -32,9 +32,9 @@ public class CarrosController {
     public void salvarCarros(@RequestBody Carros carro){
         carrosService.salvarCarro(carro);
     }
-    @PutMapping
-    public void attCarros(@RequestBody Carros carro){
-        carrosService.atualizandoCarros(carro);
+    @PutMapping("/{id}")
+    public void attCarros(@PathVariable Long id , @RequestBody Carros carro){
+        carrosService.atualizandoCarros(id,carro);
     }
     @DeleteMapping("/id/{id}")
     public void deletaCarros(@PathVariable Long id){

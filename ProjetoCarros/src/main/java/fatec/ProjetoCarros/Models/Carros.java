@@ -17,7 +17,7 @@ public class Carros {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "Carros", length = 150)
+    @Column(name = "Modelo", length = 150)
     @NotBlank(message = "O Carro não pode ter nome nulo")
     private String modelo;
 
@@ -32,9 +32,6 @@ public class Carros {
     @Column(name = "Quilometragem")
     @NotNull(message = "Quilometragem não pode ser nula")
     private Short quilometragem;
-
-    @Column(name = "Imagem", length = 300)
-    private String imagemPath;
 
     public Carros(){
 
@@ -60,9 +57,6 @@ public class Carros {
         return quilometragem;
     }
 
-    public String getImagemPath() {
-        return imagemPath;
-    }
 
     public void setId(Long id) {
         this.id = id;
@@ -78,10 +72,6 @@ public class Carros {
 
     public void setModelo(String modelo) {
         this.modelo = modelo;
-    }
-
-    public void setImagemPath(String imagemPath) {
-        this.imagemPath = imagemPath;
     }
 
     public void setQuilometragem(Short quilometragem) {
