@@ -18,12 +18,12 @@ public class CarrosService {
 
     //método de pegar carros ( por id, todos e por nome)
 
-    private Carros buscarPorId(Long id){
+    public Carros buscarPorId(Long id){
         return carrosRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Esse carro não existe"));
     }
 
-    private List<Carros> buscartTodos(){
+    public List<Carros> buscartTodos(){
         List<Carros> carros = carrosRepository.findAll();
         if(carros.isEmpty()){
             throw new NoSuchElementException("Não há carros cadastrados ainda");
@@ -32,7 +32,7 @@ public class CarrosService {
         return carros;
     }
 
-    private List<Carros> buscarPorModelo(String modelo){
+    public List<Carros> buscarPorModelo(String modelo){
         List<Carros> carros = carrosRepository.findByModelo(modelo);
 
         if(carros.isEmpty()){
@@ -43,12 +43,12 @@ public class CarrosService {
     }
 
     //método de salvar carros
-    private void salvarCarro(Carros carro){
+    public void salvarCarro(Carros carro){
         carrosRepository.save(carro);
     }
 
     //atualizando as informações sobre os novos carros
-    private void atualizandoCarros(Carros carroNovo){
+    public void atualizandoCarros(Carros carroNovo){
         Carros carro = carrosRepository.findById(carroNovo.getId())
                         .orElseThrow(() -> new IllegalArgumentException("Esse carro não existe"));
         carro.setModelo(carroNovo.getModelo());
@@ -59,7 +59,7 @@ public class CarrosService {
     }
 
     //deletenado carro
-    private void deletarCarro(Long id){
+    public void deletarCarro(Long id){
         Carros carro = carrosRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Carro não existe"));
         carrosRepository.delete(carro);
