@@ -54,6 +54,7 @@ public class CarrosService {
         carro.setModelo(carroNovo.getModelo());
         carro.setAno(carroNovo.getAno());
         carro.setQuilometragem(carroNovo.getQuilometragem());
+        carro.setMarca(carroNovo.getMarca());
         carrosRepository.save(carro);
     }
 
