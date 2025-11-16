@@ -29,7 +29,7 @@ public class Carros {
     @NotNull(message = "Ano não pode ser nula")
     private Integer ano;
 
-    @Column(name = "Quilometragem")
+    @Column(name = "Quilometragem", nullable = true)
     @NotNull(message = "Quilometragem não pode ser nula")
     private Short quilometragem;
 
