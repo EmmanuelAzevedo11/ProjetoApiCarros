@@ -31,7 +31,7 @@ public class Carros {
 
     @Column(name = "Quilometragem", nullable = true)
     @NotNull(message = "Quilometragem não pode ser nula")
-    private Short quilometragem;
+    private Integer quilometragem;
 
     public Carros(){
 
@@ -53,7 +53,7 @@ public class Carros {
         return modelo;
     }
 
-    public Short getQuilometragem() {
+    public Integer getQuilometragem() {
         return quilometragem;
     }
 
@@ -74,7 +74,7 @@ public class Carros {
         this.modelo = modelo;
     }
 
-    public void setQuilometragem(Short quilometragem) {
+    public void setQuilometragem(Integer quilometragem) {
         this.quilometragem = quilometragem;
     }
 

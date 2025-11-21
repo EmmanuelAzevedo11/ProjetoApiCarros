@@ -12,6 +12,8 @@ import java.util.List;
 
 public class CarrosController {
 
+    private static String caminhoImagens = "C:\\Users\\emman\\Desktop\\T.i";
+
     private CarrosService carrosService;
 
     public CarrosController(CarrosService carrosService){
@@ -41,7 +43,6 @@ public class CarrosController {
     public void deletaCarros(@PathVariable Long id){
         carrosService.deletarCarro(id);
     }
-
 
 
 
