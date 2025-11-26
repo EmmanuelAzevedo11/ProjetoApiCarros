@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Api de Carros</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+      <div class="header">
+        <h1>Catálogo de Carros</h1>
+        <div class="toolbar">
+        </div>
+      </div>
+
+      <form id="form" style="margin-bottom:12px;">
+        <h3 id="formTitle">Cadastrar Carro</h3>
+        <div class="form-row">
+          <input id="marca" placeholder="Marca (ex: Fiat)" />
+          <input id="modelo" placeholder="Modelo (ex: Uno)" />
+        </div>
+        <div class="form-row">
+          <input id="ano" type="number" placeholder="Ano" />
+        </div>
+        <div class="form-row">
+          <input id="km" type="number" placeholder="Quilometragem (ex: 35000)" />
+        </div>
+        <div style="display:flex; gap:8px;">
+          <button id="saveBtn" class="button" type="submit">Salvar</button>
+          <button id="cancelBtn" class="button secondary">Cancelar</button>
+        </div>
+      </form>
+
+      <main>
+          <div id="carsLook">
+              
+          </div>
+      </main>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
